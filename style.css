@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(255, 187, 0);
+    padding: 2rem;
+}
+
+body {
+    background-color: deepskyblue;
+}
+
+main {
+    border: 5px solid green;
+    max-width: 150ch;
+    margin: 0 auto;
+}
+
+main section {
+    border: 5px dashed grey;
+    padding: 1rem;
+    margin: 0.5rem;
+    
+}
+
+.types {
+    display: inline-block;
+    _box-sizing: ;
+}
