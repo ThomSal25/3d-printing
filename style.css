@@ -3,6 +3,12 @@
     font-size: 16px;
 }
 
+::selection { /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
+    :: kann nur font Eigenschaften ändern, keine Funktionen*/
+    background-color: black;
+    color: beige;
+}
+
 header {
     text-align: center;
     background-color: rgb(255, 187, 0);
@@ -23,10 +29,17 @@ main section {
     border: 5px dashed grey;
     padding: 1rem;
     margin: 0.5rem;
+    max-width: 50%;
     
 }
 
-.types {
-    display: inline-block;
-    _box-sizing: ;
+.article1 {
+    text-align: center;
 }
+
+.types {
+    display: inline-block; /*macht section zu inline-Element, dadurch können die sections von text-align angesprochen werden.*/
+
+    margin: 5%;
+}
+
