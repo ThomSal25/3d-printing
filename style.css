@@ -28,16 +28,21 @@ body {
 }
 
 main {
-    border: 5px solid green;
+    _border: 5px dashed green;
     max-width: 150ch;
     margin: 0 auto;
 }
 
 main section {
-    border: 5px dashed grey;
+    _border: 5px dashed grey;
     padding: 1rem;
     margin: 0.5rem;
         
+}
+
+article + article {
+    border-top: 0.25rem solid;
+    margin-top: 3rem;
 }
 
 .article1 {
@@ -46,22 +51,35 @@ main section {
 
 .types {
     display: inline-block; /*macht section zu inline-Element, dadurch können die sections von text-align angesprochen werden.*/
+    border: 0.25rem solid black;
+    border-radius: 1rem;
     max-width: 30ch;
 
     margin: 2%;
 }
 
+.types > p {
+    text-align: left;
+}
+
 .galery{
-    border: 5px dashed violet;
+    border: 0.25rem solid black;
+    border-radius: 3rem;
     
 }
 
 .galery > section {
     display: inline-block;
-    border: 5px solid red;
+    _border: 5px solid red;
     margin-block: auto;
 }
 
 img {
+    max-height: 250px;
+    max-width: 250px;
     vertical-align: middle;
+}
+
+img:hover {
+    transform: scale(3);
 }
