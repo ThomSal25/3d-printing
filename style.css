@@ -3,6 +3,14 @@
     font-size: 16px;
 }
 
+@media screen and (max-width:900px) { /*Smartphone-Display*/
+       .types{
+        min-width: 50ch;
+        max-width: 70ch;
+        display: block;
+    }
+}
+
 ::selection { /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
     :: kann nur font Eigenschaften ändern, keine Funktionen*/
     background-color: black;
@@ -29,8 +37,7 @@ main section {
     border: 5px dashed grey;
     padding: 1rem;
     margin: 0.5rem;
-    max-width: 50%;
-    
+        
 }
 
 .article1 {
@@ -39,7 +46,22 @@ main section {
 
 .types {
     display: inline-block; /*macht section zu inline-Element, dadurch können die sections von text-align angesprochen werden.*/
+    max-width: 30ch;
 
-    margin: 5%;
+    margin: 2%;
 }
 
+.galery{
+    border: 5px dashed violet;
+    
+}
+
+.galery > section {
+    display: inline-block;
+    border: 5px solid red;
+    margin-block: auto;
+}
+
+img {
+    vertical-align: middle;
+}
