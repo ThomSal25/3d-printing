@@ -58,13 +58,44 @@ article + article {
     margin: 2%;
 }
 
-.types > p {
+.types > .description { /*Damit die Videos mittig bleiben*/
     text-align: left;
 }
 
-.galery{
+p > #auswahl {
+    text-align: center;
+    height: 3rem;
+    width: 13rem;
+    /* border: 5px dashed green; */
+    border-radius: 1rem;
+}
+
+select:focus {
+    background-color: black;
+    color: beige;
+    border: black;
+}
+
+.galery-border {
     border: 0.25rem solid black;
     border-radius: 3rem;
+    height: 18rem;
+    margin-bottom: 5rem;
+    background-color: aliceblue;
+    overflow: hidden; /*Versteckt alles, was den Rahmen der .galery überragt*/
+}
+
+.galery{
+    _box-sizing: border-box;
+    display: block;
+    height: 18rem;
+    width: 2000px;
+    _border: 0.25rem solid black;
+    margin-bottom: 5rem;
+    _background-color: aliceblue;
+    _border-radius: 3rem;
+
+    
     
 }
 
@@ -72,6 +103,24 @@ article + article {
     display: inline-block;
     _border: 5px solid red;
     margin-block: auto;
+    
+    
+    animation: slideshow 20s infinite linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes slideshow { /*Definiert den Start bzw Endpunkt der Animation*/
+    0% {
+        translate: -250%; /*Start erstes Bild*/
+    }
+
+    100% {
+        translate: 0%; /*Ende letztes Bild*/
+    }
+}
+
+.high { /*Bilder im Hochformat brauchen ein breiteres Padding, ansonsten sind die Querformatbilder schneller in der Animation*/
+    padding-inline: 70px;
 }
 
 img {

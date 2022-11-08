@@ -23,7 +23,7 @@
             </section>
             <section class="types">
                 <p><h3>FDM-Drucker</h3></p>
-                <p>Bei der <strong><abbr title="Fused Deposition Modeling">FDM</abbr>-Technik</strong> 
+                <p class="description">Bei der <strong><abbr title="Fused Deposition Modeling">FDM</abbr>-Technik</strong> 
                     wird ein Kunststoff-Faden <small><i>Filament</i></small> in einem <i>Extruder</i> durch eine 
                     <i>Düse <small>(Nozzle)</small></i> gefrückt. Der Drucker besitzt in der Regel 3 verschiedene 
                     <i>Achsen</i>, die jeweils durch einen <i>Schrittmotor</i> angetrieben werden.<br> Das Modell 
@@ -32,7 +32,7 @@
             </section>
             <section class="types">
                 <p><h3>Resin-Drucker</h3></p>
-                <p>Resin-Drucker arbeiten mit einem <i>Kunststoff-Harz</i>. Dieses befindet sich in einem kleinen 
+                <p class="description">Resin-Drucker arbeiten mit einem <i>Kunststoff-Harz</i>. Dieses befindet sich in einem kleinen 
                     Tank mit <i>transparentem</i> Boden. EinStempel taucht in den Tank ein und ein unter dem Tank 
                     <i>installiertes</i> Display härtet das Harz aus. Während der Stampel langsam aus dem Harzbad 
                     fährt, wächst das Modell Schicht für Schicht.</p>
@@ -40,34 +40,45 @@
             </section>
             <section class="types">
                 <p><h3>Pulver-Drucker</h3></p>
-                <p>Bei Pulver-Druckern wird durch <i>selektives Lasersintern</i> ein Formteil erzeugt. Dafür wird zunächst eine Schicht Pulver auf dem <i>Druckbett</i> aufgebracht. Ein Laser fährt nun den Querschnitt des zu fertigen Teils ab. Anschließend wird eine neue Schicht Puler aufgetragen und der Vorgang wiederholt.</p>
+                <p class="description">Bei Pulver-Druckern wird durch <i>selektives Lasersintern</i> ein Formteil erzeugt. Dafür wird zunächst eine Schicht Pulver auf dem <i>Druckbett</i> aufgebracht. Ein Laser fährt nun den Querschnitt des zu fertigen Teils ab. Anschließend wird eine neue Schicht Puler aufgetragen und der Vorgang wiederholt.</p>
                 <p><iframe width="200" height="135" src="https://www.youtube.com/embed/yiUUZxp7bLQ" title="How it Works: Direct Metal Laser Sintering (DMLS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
             </section>
         </article>
-        <article class="article1">
+        <article class="article1 pattern">
             <section>
                 <h2> Die <i>Hall of Print</i></h2>
                 <p>Hier gibt es die aktuellen und bisher erfolgeich abgeschlossenen Druck-Projekte.</p>
+                <p>
+                    <select name="auswahl" id="auswahl">
+                        <option value="manga">--Was wollt ihr sehen?--</option>
+                        <option value="manga">Manga</option>
+                        <option value="comic">Comic</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="music">Music</option>
+                    </select>
+                </p>
             </section>
-            <div class="galery"> <!--Slideshow in Planung-->
-                <section>
-                    <img src="bildergalerie/wonderwoman.jpg" alt="Wonderwoman">
-                </section>
-                <section>
-                    <img src="bildergalerie/Snakeman.jpg" alt="Ruffy - Snakeman">
-                </section>
-                <section>
-                    <img src="bildergalerie/keith-richards.jpg" alt="Keith Richards">
-                </section>
-                <section>
-                    <img src="bildergalerie/Vegeta-Ozaru.jpg" alt="Vegeta">
-                </section>
-                <section>
-                    <img src="bildergalerie/Elderstab.jpg" alt="Elderstab">
-                </section>
-                <section>
-                    <img src="bildergalerie/Kaido.jpg" alt="Kaido">
-                </section>
+            <div class="galery-border">
+                <div class="galery"> <!--Slideshow in Planung-->
+                    <section class="high comic">
+                        <img src="bildergalerie/wonderwoman.jpg" alt="Wonderwoman">
+                    </section>
+                    <section>
+                        <img src="bildergalerie/Snakeman.jpg" alt="Ruffy - Snakeman">
+                    </section>
+                    <section class="high">
+                        <img src="bildergalerie/keith-richards.jpg" alt="Keith Richards">
+                    </section>
+                    <section>
+                        <img src="bildergalerie/Vegeta-Ozaru.jpg" alt="Vegeta">
+                    </section>
+                    <section class="high">
+                        <img src="bildergalerie/Elderstab.jpg" alt="Elderstab">
+                    </section>
+                    <section>
+                        <img src="bildergalerie/Kaido.jpg" alt="Kaido">
+                    </section>
+                </div>
             </div>
         </article>
     </main>
