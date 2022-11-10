@@ -1,3 +1,4 @@
+/* Seitenübergreifende Settings */
 *{
     box-sizing: border-box;
     font-size: 16px;
@@ -17,14 +18,44 @@
     color: beige;
 }
 
+/* Settings Header */
 header {
     text-align: center;
     background-color: rgb(255, 187, 0);
     padding: 2rem;
 }
 
+/* Test Menue */
+.vis {
+    display: inline-block;
+    border: .25rem solid black;
+    border-radius: 0.5rem;
+    padding: .75rem;
+    background-color: beige;
+
+    max-width: 7rem;
+}
+
+.vis .hidden{ /*Links zu Subseiten sind verborgen*/
+    display: none;
+}
+
+.vis:hover .hidden{ /*Links zu Subseiten werden beim hover sichtbar*/
+    display: inline-block;
+    }
+
+/* Settings Body */
 body {
     background-color: deepskyblue;
+}
+
+aside {
+    display: inline-block;
+    border: 5px dashed violet;
+    position: sticky;
+    
+    top: 600px;
+    left: 500px;
 }
 
 main {
@@ -45,11 +76,11 @@ article + article {
     margin-top: 3rem;
 }
 
-.article1 {
+.article1 { /*Wird angewandt für alle Abschnittsüberschriften*/
     text-align: center;
 }
 
-.types {
+.types { /*3D-Druckertypen*/
     display: inline-block; /*macht section zu inline-Element, dadurch können die sections von text-align angesprochen werden.*/
     border: 0.25rem solid black;
     border-radius: 1rem;
@@ -58,12 +89,11 @@ article + article {
     margin: 2%;
 }
 
-.types > .description { /*Damit die Videos mittig bleiben*/
+.types > .description { /*Nur Text ist linksbündig*/
     text-align: left;
 }
 
-p > #auswahl {
-    text-align: center;
+p > #auswahl { /*Dropdown in Vorbereitung*/
     height: 3rem;
     width: 13rem;
     /* border: 5px dashed green; */
@@ -76,16 +106,17 @@ select:focus {
     border: black;
 }
 
-.galery-border {
+.galery-border, .galery2 {/* Formatierung Slidebar*/
     border: 0.25rem solid black;
     border-radius: 3rem;
-    height: 18rem;
+    height: 25rem;
     margin-bottom: 5rem;
     background-color: aliceblue;
     overflow: hidden; /*Versteckt alles, was den Rahmen der .galery überragt*/
 }
 
-.galery{
+/* Slideshow Variante 1 ohne Flexbox */
+/* .galery{
     _box-sizing: border-box;
     display: block;
     height: 18rem;
@@ -93,19 +124,16 @@ select:focus {
     _border: 0.25rem solid black;
     margin-bottom: 5rem;
     _background-color: aliceblue;
-    _border-radius: 3rem;
+    _border-radius: 3rem;     
+}*/
 
-    
-    
-}
-
-.galery > section {
+.galery > section, .galery2 > section { /*Formatierung Bilder in Slideshow*/
     display: inline-block;
     _border: 5px solid red;
     margin-block: auto;
     
     
-    animation: slideshow 20s infinite linear;
+    animation: slideshow 10s infinite linear;
     animation-direction: alternate-reverse;
 }
 
@@ -131,4 +159,13 @@ img {
 
 img:hover {
     transform: scale(3);
+}
+
+.galery2 {
+    display: flex;
+    _flex-direction: row-reverse; /*Wenn angewendet, müssen auch Animationswerte angepasst werden!*/ 
+    _border: 5px solid red;
+    overflow: hidden;
+
+    vertical-align: middle;
 }

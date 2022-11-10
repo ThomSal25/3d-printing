@@ -14,8 +14,17 @@
     <header>
         <h1>Wilkommen in der Welt des 3D-Drucks</h1>
         <p> Hier entsteht eine Dokumentation meiner bisherigen Erfahrungen mit dieser <em>fazinierenden</em> <small>(und manchaml auch leicht frustierenden)</small> Technologie. <br> Viel Spaß!</p>
+        <!-- Test Menue Links zu weiteren Seiten nur nach hover sichtbar-->
+        <!-- <article>
+            <section class="vis">
+                <p>Seite 1</p>
+                <p class="hidden"><a href="https://www.youtube.com/" target="_blank">Youtube</a></p>
+                <p class="hidden">Google</p>
+                <p class="hidden">Facebook</p>
+            </section>
+        </article> -->
     </header>
-    <main>
+       <main>
         <article class="article1">
             <section>
                 <h2>Welche Druckvarianten gibt es?</h2>
@@ -28,7 +37,7 @@
                     <i>Düse <small>(Nozzle)</small></i> gefrückt. Der Drucker besitzt in der Regel 3 verschiedene 
                     <i>Achsen</i>, die jeweils durch einen <i>Schrittmotor</i> angetrieben werden.<br> Das Modell 
                     wird Schicht für Schicht aufgebaut.</p>
-                <p><iframe width="200" height="135" src="https://www.youtube.com/embed/GxLjDNrQBgs" title="What is FDM 3D Printing Technology | Fused Deposition Modeling Additive Manufacturing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p><iframe width="200" height="135" src="https://www.youtube-nocookie.com/embed/GxLjDNrQBgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
             </section>
             <section class="types">
                 <p><h3>Resin-Drucker</h3></p>
@@ -36,12 +45,12 @@
                     Tank mit <i>transparentem</i> Boden. EinStempel taucht in den Tank ein und ein unter dem Tank 
                     <i>installiertes</i> Display härtet das Harz aus. Während der Stampel langsam aus dem Harzbad 
                     fährt, wächst das Modell Schicht für Schicht.</p>
-                <p><iframe width="200" height="135" src="https://www.youtube.com/embed/gMRUlZegFLA" title="How Resin 3D-Printing Works" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p><iframe width="200" height="135" src="https://www.youtube-nocookie.com/embed/gMRUlZegFLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
             </section>
             <section class="types">
                 <p><h3>Pulver-Drucker</h3></p>
                 <p class="description">Bei Pulver-Druckern wird durch <i>selektives Lasersintern</i> ein Formteil erzeugt. Dafür wird zunächst eine Schicht Pulver auf dem <i>Druckbett</i> aufgebracht. Ein Laser fährt nun den Querschnitt des zu fertigen Teils ab. Anschließend wird eine neue Schicht Puler aufgetragen und der Vorgang wiederholt.</p>
-                <p><iframe width="200" height="135" src="https://www.youtube.com/embed/yiUUZxp7bLQ" title="How it Works: Direct Metal Laser Sintering (DMLS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p><iframe width="200" height="135" src="https://www.youtube-nocookie.com/embed/yiUUZxp7bLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
             </section>
         </article>
         <article class="article1 pattern">
@@ -50,16 +59,27 @@
                 <p>Hier gibt es die aktuellen und bisher erfolgeich abgeschlossenen Druck-Projekte.</p>
                 <p>
                     <select name="auswahl" id="auswahl">
-                        <option value="manga">--Was wollt ihr sehen?--</option>
-                        <option value="manga">Manga</option>
-                        <option value="comic">Comic</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="music">Music</option>
+                        <option value="">--Was wollt ihr sehen?--</option>
+                        <optgroup label="Manga">
+                            <option value="manga">alle</option>
+                            <option value="manga">Dragonball</option>
+                            <option value="manga">One Piece</option>
+                        </optgroup>
+                        <optgroup label="Comic">
+                            <option value="comic">DC</option>
+                        </optgroup>
+                        <optgroup label="Fantasy">
+                            <option value="fantasy">Harry Potter</option>
+                        </optgroup>
+                        <optgroup label="Music">
+                            <option value="music">Rolling Stones</option>
+                        </optgroup>
                     </select>
                 </p>
             </section>
-            <div class="galery-border">
-                <div class="galery"> <!--Slideshow in Planung-->
+            <!-- Slideshow Variante 1 ohne Flexbox -->
+            <!-- <div class="galery-border">
+                <div class="galery"> 
                     <section class="high comic">
                         <img src="bildergalerie/wonderwoman.jpg" alt="Wonderwoman">
                     </section>
@@ -79,6 +99,32 @@
                         <img src="bildergalerie/Kaido.jpg" alt="Kaido">
                     </section>
                 </div>
+            </div> -->
+            <div class="galery2"> <!--Slideshow in Planung-->
+                <section class="high comic">
+                   <img src="bildergalerie/wonderwoman.jpg" alt="Wonderwoman">
+                   <p>Wonderman in Bronze</p>
+                </section>
+                <section>
+                    <img src="bildergalerie/Snakeman.jpg" alt="Ruffy - Snakeman">
+                    <p class="quer">Moneky D Ruffy (Gear 4 / Snakeman)</p>
+                </section>
+                <section class="high">
+                    <img src="bildergalerie/keith-richards.jpg" alt="Keith Richards">
+                    <p>Keith Richard (Rolling Stones)</p>
+                </section>
+                <section>
+                    <img src="bildergalerie/Vegeta-Ozaru.jpg" alt="Vegeta">
+                    <p class="quer">Vegeta - Ozaru-Form</p>
+                </section>
+                <section class="high">
+                    <img src="bildergalerie/Elderstab.jpg" alt="Elderstab">
+                    <p>Elderstab - Harry Potter</p>
+                </section>
+                <section>
+                    <img src="bildergalerie/Kaido.jpg" alt="Kaido">
+                    <p class="quer">Kaido - Zoantyp Fisch / <br> Modifikation Azurdrache</p>
+                </section>
             </div>
         </article>
     </main>
