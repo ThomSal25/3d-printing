@@ -4,25 +4,33 @@
     font-size: 16px;
 }
 
-@media screen and (max-width:900px) { /*Smartphone-Display*/
-       .types{
-        min-width: 50ch;
-        max-width: 70ch;
-        display: block;
-    }
-}
-
 ::selection { /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
     :: kann nur font Eigenschaften ändern, keine Funktionen*/
     background-color: black;
     color: beige;
 }
 
+/* Settings Body */
+body {
+    background-color: deepskyblue;
+    background-image: linear-gradient(.35turn, deepskyblue, rgb(142, 218, 20) 87%);
+}
+
+@media screen and (min-width:900px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
 /* Settings Header */
 header {
     text-align: center;
     background-color: rgb(255, 187, 0);
+    background-image: linear-gradient(.35turn, yellow, orange, gold);
     padding: 2rem;
+
+    grid-column: 1/-1;
 }
 
 /* Test Menue */
@@ -44,24 +52,18 @@ header {
     display: inline-block;
     }
 
-/* Settings Body */
-body {
-    background-color: deepskyblue;
-}
-
-aside {
-    display: inline-block;
-    border: 5px dashed violet;
-    position: sticky;
-    
-    top: 600px;
-    left: 500px;
-}
-
 main {
     _border: 5px dashed green;
-    max-width: 150ch;
+    max-width: 75ch;
     margin: 0 auto;
+
+    grid-column: 2/3;
+}
+
+@media screen and (min-width:1200px) {
+    main {
+        max-width: 150ch;
+    }
 }
 
 main section {
@@ -89,6 +91,14 @@ article + article {
     margin: 2%;
 }
 
+@media screen and (max-width:1200px) { /*Smartphone-Display*/
+    .types{
+     _min-width: 50ch;
+     max-width: 70ch;
+     display: block;
+ }
+}
+
 .types > .description { /*Nur Text ist linksbündig*/
     text-align: left;
 }
@@ -110,7 +120,8 @@ select:focus {
     border: 0.25rem solid black;
     border-radius: 3rem;
     height: 25rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
+    margin-inline: 5rem;
     background-color: aliceblue;
     overflow: hidden; /*Versteckt alles, was den Rahmen der .galery überragt*/
 }
@@ -155,11 +166,12 @@ img {
     max-height: 250px;
     max-width: 250px;
     vertical-align: middle;
+    transition: transform 5s;
 }
 
 img:hover {
     transform: scale(3);
-}
+    }
 
 .galery2 {
     display: flex;
@@ -168,4 +180,24 @@ img:hover {
     overflow: hidden;
 
     vertical-align: middle;
+}
+
+aside {
+    _display: none;
+    border: 5px dashed violet;
+    text-align: center;
+    
+    grid-column: 3;
+}
+
+aside>img {
+    vertical-align: middle;
+}
+
+footer {
+    _border: 5px dashed red;
+
+    grid-column: 1/-1;
+
+    text-align: center;
 }
