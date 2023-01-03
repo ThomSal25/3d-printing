@@ -205,3 +205,8 @@ footer {
 
     text-align: center;
 }
+
+.hide {
+    visibility: collapse;
+    display: none;
+}
