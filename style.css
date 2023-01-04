@@ -139,8 +139,6 @@ select:focus {
 }*/
 
 .galery > section, .galery2 > section { /*Formatierung Bilder in Slideshow*/
-    display: inline-block;
-    _border: 5px solid red;
     margin-block: auto;
     
     
@@ -207,6 +205,6 @@ footer {
 }
 
 .hide {
-    visibility: collapse;
+    visibility: hidden;
     display: none;
 }
