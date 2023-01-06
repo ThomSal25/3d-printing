@@ -149,7 +149,7 @@ select:focus {
 .galery3{
     text-align: center;
   max-width: 30rem;
-  max-height: 30rem;
+  min-height: 25rem;
 }
 
 /* Slideshow Variante 1 ohne Flexbox */
