@@ -1,129 +1,148 @@
 /* Seitenübergreifende Settings */
-*{
-    box-sizing: border-box;
-    font-size: 16px;
+* {
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-::selection { /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
+:root {
+  --time: 30s;
+  --duration: 27s;
+}
+
+::selection {
+  /*Markierter Text wird beige mit schwarzem Hintergrund hervorgehoben
     :: kann nur font Eigenschaften ändern, keine Funktionen*/
-    background-color: black;
-    color: beige;
+  background-color: black;
+  color: beige;
 }
 
 /* Settings Body */
 body {
-    background-color: deepskyblue;
-    background-image: linear-gradient(.35turn, deepskyblue, rgb(142, 218, 20) 87%);
+  background-color: deepskyblue;
+  background-image: linear-gradient(
+    0.35turn,
+    deepskyblue,
+    rgb(142, 218, 20) 87%
+  );
 }
 
-@media screen and (min-width:900px) {
-    body{
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-    }
+@media screen and (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
 /* Settings Header */
 header {
-    text-align: center;
-    background-color: rgb(255, 187, 0);
-    background-image: linear-gradient(.35turn, yellow, orange, gold);
-    padding: 2rem;
+  text-align: center;
+  background-color: rgb(255, 187, 0);
+  background-image: linear-gradient(0.35turn, yellow, orange, gold);
+  padding: 2rem;
 
-    grid-column: 1/-1;
+  grid-column: 1/-1;
 }
 
 /* Test Menue */
 .vis {
-    display: inline-block;
-    border: .25rem solid black;
-    border-radius: 0.5rem;
-    padding: .75rem;
-    background-color: beige;
+  display: inline-block;
+  border: 0.25rem solid black;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background-color: beige;
 
-    max-width: 7rem;
+  max-width: 7rem;
 }
 
-.vis .hidden{ /*Links zu Subseiten sind verborgen*/
-    display: none;
+.vis .hidden {
+  /*Links zu Subseiten sind verborgen*/
+  display: none;
 }
 
-.vis:hover .hidden{ /*Links zu Subseiten werden beim hover sichtbar*/
-    display: inline-block;
-    }
+.vis:hover .hidden {
+  /*Links zu Subseiten werden beim hover sichtbar*/
+  display: inline-block;
+}
 
 main {
-    _border: 5px dashed green;
-    max-width: 75ch;
-    margin: 0 auto;
+  _border: 5px dashed green;
+  max-width: 75ch;
+  margin: 0 auto;
 
-    grid-column: 2/3;
+  grid-column: 2/3;
 }
 
-@media screen and (min-width:1200px) {
-    main {
-        max-width: 150ch;
-    }
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 150ch;
+  }
 }
 
 main section {
-    _border: 5px dashed grey;
-    padding: 1rem;
-    margin: 0.5rem;
-        
+  _border: 5px dashed grey;
+  padding: 1rem;
+  margin: 0.5rem;
 }
 
 article + article {
-    border-top: 0.25rem solid;
-    margin-top: 3rem;
+  border-top: 0.25rem solid;
+  margin-top: 3rem;
 }
 
-.article1 { /*Wird angewandt für alle Abschnittsüberschriften*/
-    text-align: center;
+.article1 {
+  /*Wird angewandt für alle Abschnittsüberschriften*/
+  text-align: center;
 }
 
-.types { /*3D-Druckertypen*/
-    display: inline-block; /*macht section zu inline-Element, dadurch können die sections von text-align angesprochen werden.*/
-    border: 0.25rem solid black;
-    border-radius: 1rem;
-    max-width: 30ch;
+.types {
+  /*3D-Druckertypen*/
+  display: inline-block; /*macht section zu inline-Element, dadurch können die sections von text-align angesprochen werden.*/
+  border: 0.25rem solid black;
+  border-radius: 1rem;
+  max-width: 30ch;
 
-    margin: 2%;
+  margin: 2%;
 }
 
-@media screen and (max-width:1200px) { /*Smartphone-Display*/
-    .types{
-     _min-width: 50ch;
-     max-width: 70ch;
-     display: block;
- }
+@media screen and (max-width: 1200px) {
+  /*Smartphone-Display*/
+  .types {
+    _min-width: 50ch;
+    max-width: 70ch;
+    display: block;
+  }
 }
 
-.types > .description { /*Nur Text ist linksbündig*/
-    text-align: left;
+.types > .description {
+  /*Nur Text ist linksbündig*/
+  text-align: left;
 }
 
-p > #auswahl { /*Dropdown in Vorbereitung*/
-    height: 3rem;
-    width: 13rem;
-    /* border: 5px dashed green; */
-    border-radius: 1rem;
+p > #auswahl {
+  /*Dropdown in Vorbereitung*/
+  height: 3rem;
+  width: 13rem;
+  /* border: 5px dashed green; */
+  border-radius: 1rem;
 }
 
 select:focus {
-    background-color: black;
-    color: beige;
-    border: black;
+  background-color: black;
+  color: beige;
+  border: black;
 }
 
-.galery-border, .galery2 {/* Formatierung Slidebar*/
-    border: 0.25rem solid black;
-    border-radius: 3rem;
-    height: 25rem;
-    margin-bottom: 2.5rem;
-    margin-inline: 5rem;
-    background-color: aliceblue;
-    overflow: hidden; /*Versteckt alles, was den Rahmen der .galery überragt*/
+.galery-border,
+.galery2,
+.galery3 {
+  /* Formatierung Slidebar*/
+  border: 0.25rem solid black;
+  border-radius: 3rem;
+  height: 25rem;
+  margin-bottom: 2.5rem;
+  margin-inline: 5rem;
+  background-color: aliceblue;
+  overflow: hidden; /*Versteckt alles, was den Rahmen der .galery überragt*/
 }
 
 /* Slideshow Variante 1 ohne Flexbox */
@@ -138,73 +157,145 @@ select:focus {
     _border-radius: 3rem;     
 }*/
 
-.galery > section, .galery2 > section { /*Formatierung Bilder in Slideshow*/
-    margin-block: auto;
-    
-    
-    animation: slideshow 10s infinite linear;
-    animation-direction: alternate-reverse;
+.galery > section,
+.galery2 > section {
+  /*Formatierung Bilder in Slideshow*/
+  margin-block: auto;
+
+  _animation: slideshow var(--time) infinite linear;
+  _animation-direction: alternate-reverse;
 }
 
-@keyframes slideshow { /*Definiert den Start bzw Endpunkt der Animation*/
-    0% {
-        translate: -250%; /*Start erstes Bild*/
-    }
+@keyframes slideshow {
+  /*Definiert den Start bzw Endpunkt der Animation*/
+  0% {
+    translate: -800%; /*Start erstes Bild*/
+  }
 
-    100% {
-        translate: 0%; /*Ende letztes Bild*/
-    }
+  100% {
+    translate: 0%; /*Ende letztes Bild*/
+  }
 }
 
-.high { /*Bilder im Hochformat brauchen ein breiteres Padding, ansonsten sind die Querformatbilder schneller in der Animation*/
-    padding-inline: 70px;
+@keyframes fade {
+  0% {
+    opacity: 0;
+  } /** fadeIn beginnt            **/
+  11.11% {
+    opacity: 1;
+  } /** Bild steht                **/
+  33.33% {
+    opacity: 0;
+  } /** Bild bleibt zwei Sekunden **/
+  44.44% {
+    opacity: 0;
+  } /** fadeOut beendet           **/
+  100% {
+    opacity: 0;
+  }
+}
+
+.css-slides {
+  position: relative;
+  height: 0;
+  padding-bottom: calc(286 / 460 * 100%);
+  overflow: hidden;
+  display: block;
+}
+
+.css-slides section {
+  opacity: 0;
+  animation-name: fade;
+  _animation-duration: var(--duration);
+  animation-iteration-count: infinite;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.duration{
+    animation-duration: var(--duration); 
+}
+
+.css-slides section:nth-child(1) {
+  animation-delay: 0s;
+}
+.css-slides section:nth-child(2) {
+  animation-delay: 3s;
+}
+.css-slides section:nth-child(3) {
+  animation-delay: 6s;
+}
+.css-slides section:nth-child(4) {
+  animation-delay: 9s;
+}
+.css-slides section:nth-child(5) {
+  animation-delay: 12s;
+}
+.css-slides section:nth-child(6) {
+  animation-delay: 15s;
+}
+.css-slides section:nth-child(7) {
+  animation-delay: 18s;
+}
+.css-slides section:nth-child(8) {
+  animation-delay: 21s;
+}
+.css-slides section:nth-child(9) {
+  animation-delay: 24s;
+}
+
+.high {
+  /*Bilder im Hochformat brauchen ein breiteres Padding, ansonsten sind die Querformatbilder schneller in der Animation*/
+  padding-inline: 70px;
 }
 
 .high > img {
-    transform-origin: 10% 10%;
+  transform-origin: 10% 10%;
 }
 
 img {
-    max-height: 250px;
-    max-width: 250px;
-    vertical-align: middle;
-    transition: transform 5s;
+  max-height: 250px;
+  max-width: 250px;
+  vertical-align: middle;
+  transition: transform 5s;
 }
 
 img:hover {
-    transform: scale(3);
-    }
+  transform: scale(3);
+}
 
-.galery2 {
-    display: flex;
-    _flex-direction: row-reverse; /*Wenn angewendet, müssen auch Animationswerte angepasst werden!*/ 
-    _border: 5px solid red;
-    overflow: hidden;
+.galery2,
+.galery3 {
+  display: flex;
+  _flex-direction: row-reverse; /*Wenn angewendet, müssen auch Animationswerte angepasst werden!*/
+  overflow: hidden;
 
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 aside {
-    _display: none;
-    border: 5px dashed violet;
-    text-align: center;
-    
-    grid-column: 3;
+  _display: none;
+  border: 5px dashed violet;
+  text-align: center;
+
+  grid-column: 3;
 }
 
-aside>img {
-    vertical-align: middle;
+aside > img {
+  vertical-align: middle;
 }
 
 footer {
-    _border: 5px dashed red;
+  _border: 5px dashed red;
 
-    grid-column: 1/-1;
+  grid-column: 1/-1;
 
-    text-align: center;
+  text-align: center;
 }
 
 .hide {
-    visibility: hidden;
-    display: none;
+  display: none;
 }
