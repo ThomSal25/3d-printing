@@ -8,15 +8,16 @@ auswahl.addEventListener("change", hideShow);
 function hideShow() {
   if (auswahl.value === "option_all") {
     for (i = 0; i < galery.length; i++) {
-      galery[i].classList.remove("hide");
+        galery[i].classList.remove("hide");
+        galery[i].classList.remove("duration");
     }
   }
   select("option_manga", "manga", "9s");
-  select("option_dragonball", "dragonball");
-  select("option_one_piece", "one_piece");
-  select("option_dc", "dc");
-  select("option_harry_potter", "harry_potter");
-  select("option_stones", "stones");
+  select("option_dragonball", "dragonball", "9s");
+  select("option_one_piece", "one_piece", "9s");
+  select("option_dc", "dc", "9s");
+  select("option_harry_potter", "harry_potter", "9s");
+  select("option_stones", "stones", "9s");
 }
 
 function select(option, className, duration, time) {
